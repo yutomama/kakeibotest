@@ -1,101 +1,67 @@
-/* ベーススタイル */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f0e1; /* うっすいクリーム色 */
-    padding: 10px;
-    margin: 0;
 }
 
-/* タイトル */
-h1 {
-    font-size: 24px;
-    text-align: center;
-    color: #333;
-}
-
-/* 合計金額セクション */
 .total-section {
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 20px; /* 下部のマージンを追加 */
 }
 
-/* ボタンのスタイル */
-button {
-    padding: 15px 20px;
-    background-color: #a86cb2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #8e5a98;
-}
-
-/* 入力フィールドとセレクトボックス */
-input, select {
-    padding: 10px;
-    font-size: 16px;
-    margin: 5px 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* 商品リストのスタイル */
 .product-list {
-    margin-top: 20px;
+    width: 100%;
 }
 
 .product-item {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 10px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
 }
 
 .product-item input, .product-item select {
-    width: 48%;
-    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 16px;
+    width: 150px;
 }
 
-/* 税込価格表示 */
-.tax-price, .tax-price-with-correction {
+.product-price {
+    -moz-appearance: textfield; /* Firefox用 */
+}
+
+.product-price::-webkit-outer-spin-button, 
+.product-price::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Chrome、Safari用 */
+    margin: 0;
+}
+
+.tax-price {
     font-weight: bold;
     color: #333;
-    width: 100%;
-    text-align: right;
-    margin-top: 10px;
 }
 
-/* スマホ用レスポンシブデザイン */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 22px;
-    }
-    
-    button {
-        font-size: 16px;
-        padding: 12px 15px;
-    }
-    
-    input, select {
-        font-size: 14px;
-        padding: 8px;
-    }
+.tax-price-with-correction {
+    font-weight: bold;
+    color: #007BFF; /* 修正価格表示用の色 */
+}
 
-    .product-item input, .product-item select {
-        width: 100%;
-    }
+h1, button, p, label {
+    font-size: 18px; /* ボタンとタイトル以外の文字の大きさを統一 */
+}
 
-    .tax-price, .tax-price-with-correction {
-        font-size: 14px;
-    }
+button {
+    padding: 10px 15px;
+    background-color: #a86cb2; /* ポップな色のボタン */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8e5a98; /* ホバー時の色 */
+}
+
+/* ボタンの位置を調整するスタイル */
+#add-product-btn {
+    margin-bottom: 10px; /* ボタンと合計金額の間にスペースを追加 */
 }
