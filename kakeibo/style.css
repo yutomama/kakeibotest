@@ -1,0 +1,101 @@
+/* ベーススタイル */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0e1; /* うっすいクリーム色 */
+    padding: 10px;
+    margin: 0;
+}
+
+/* タイトル */
+h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+/* 合計金額セクション */
+.total-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ボタンのスタイル */
+button {
+    padding: 15px 20px;
+    background-color: #a86cb2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #8e5a98;
+}
+
+/* 入力フィールドとセレクトボックス */
+input, select {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 商品リストのスタイル */
+.product-list {
+    margin-top: 20px;
+}
+
+.product-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.product-item input, .product-item select {
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+/* 税込価格表示 */
+.tax-price, .tax-price-with-correction {
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* スマホ用レスポンシブデザイン */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 22px;
+    }
+    
+    button {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+    
+    input, select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .product-item input, .product-item select {
+        width: 100%;
+    }
+
+    .tax-price, .tax-price-with-correction {
+        font-size: 14px;
+    }
+}
