@@ -14,7 +14,7 @@ document.getElementById('add-product-btn').addEventListener('click', function() 
             <option value="10">10%</option>
         </select>
         <p class="tax-price">税込価格: ¥0</p>
-        <p class="tax-price-with-correction">修正金額を含む税込価格: ¥0</p>
+        <p class="tax-price-with-correction">修正税込価格: ¥0</p>
         <button class="delete-product-btn">削除</button>
     `;
 
@@ -45,14 +45,14 @@ document.getElementById('add-product-btn').addEventListener('click', function() 
     productPriceInput.addEventListener('input', function() {
         const taxPrice = calculateTaxPrice(productPriceInput, taxRateSelect, taxPriceDisplay);
         calculateTotal();
-        taxPriceWithCorrectionDisplay.textContent = `修正金額を含む税込価格: ¥${taxPrice}`;
+        taxPriceWithCorrectionDisplay.textContent = `修正税込価格: ¥${taxPrice}`;
     });
 
     // 税率変更時に税込価格を再計算
     taxRateSelect.addEventListener('change', function() {
         const taxPrice = calculateTaxPrice(productPriceInput, taxRateSelect, taxPriceDisplay);
         calculateTotal();
-        taxPriceWithCorrectionDisplay.textContent = `修正金額を含む税込価格: ¥${taxPrice}`;
+        taxPriceWithCorrectionDisplay.textContent = `修正税込価格: ¥${taxPrice}`;
     });
 
     // 削除ボタンの処理
@@ -104,7 +104,7 @@ function calculateTotal() {
         if (taxPriceMatch) {
             const originalTaxPrice = parseInt(taxPriceMatch[1].replace(/,/g, '')); // 元の税込価格
             const newTaxPrice = originalTaxPrice + correctionAmount; // 修正後の税込価格
-            selectedItem.querySelector('.tax-price-with-correction').textContent = `修正金額を含む税込価格: ¥${newTaxPrice}`;
+            selectedItem.querySelector('.tax-price-with-correction').textContent = `修正税込価格: ¥${newTaxPrice}`;
         }
     }
 }
