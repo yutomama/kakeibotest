@@ -112,3 +112,6 @@ function calculateTotal() {
 // 修正金額の変更時の処理
 document.getElementById('correction-amount').addEventListener('input', calculateTotal);
 document.getElementById('correction-product').addEventListener('change', calculateTotal);
+
+navigator.serviceWorker.register('./kakeibo/sw.js')
+
