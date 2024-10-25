@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>税計算アプリ</title>
-<link rel="stylesheet" href="./style.css">  <!-- パスを修正 -->
-<link rel="manifest" href="./manifest.json">
+<link rel="stylesheet" href="style.css">  <!-- パスを修正 -->
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
     <h1>税計算アプリ</h1>
@@ -22,11 +22,11 @@
     <div class="product-list">
         <!-- 商品が追加される場所 -->
     </div>
-<script src="./script.js"></script>  <!-- パスを修正 -->
+<script src="script.js"></script>  <!-- パスを修正 -->
 <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
+                navigator.serviceWorker.register('/sw.js')
                     .then((registration) => {
                         console.log('ServiceWorker registration successful with scope: ', registration.scope);
                     }, (error) => {
